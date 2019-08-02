@@ -1,4 +1,4 @@
-from app import db
+"""
 
 ROLE_USER = 0
 ROLE_ADMIN = 1
@@ -38,3 +38,4 @@ class Post(db.Model):
 
     def __repr__(self):
         return '<Post %r>' % (self.body)
+"""
