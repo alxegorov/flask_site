@@ -21,7 +21,7 @@ msgstr ""
 
 #: app/__init__.py:20
 msgid "Please log in to access this page."
-msgstr "Пожалуста, войдите, чтобы получить доступ к страницк"
+msgstr "Пожалуста, войдите, чтобы получить доступ к страницеП"
 
 #: app/email.py:23
 msgid "[Microblog] Reset Your Password"
@@ -89,11 +89,11 @@ msgstr "Ваш пост опубикован"
 
 #: app/routes.py:35 app/templates/base.html:21
 msgid "Home"
-msgstr "Домой"
+msgstr "Дом"
 
 #: app/routes.py:46 app/templates/base.html:22
 msgid "Explore"
-msgstr "Изучить"
+msgstr "Обзор"
 
 #: app/routes.py:57
 msgid "Invalid username or password"
@@ -227,16 +227,16 @@ msgstr "Последний вход"
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d followers"
-msgstr "%(count)d подписчиков"
+msgstr "Подписчики: %(count)d"
 
 #: app/templates/user.html:13
 #, python-format
 msgid "%(count)d following"
-msgstr "%(count)d подписок"
+msgstr "Подписки: %(count)d"
 
 #: app/templates/user.html:15
 msgid "Edit your profile"
-msgstr "Редактирование профиля"
+msgstr "Редактировать профиль"
 
 #: app/templates/user.html:17
 msgid "Follow"
