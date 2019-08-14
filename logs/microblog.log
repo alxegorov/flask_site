@@ -86,3 +86,5 @@ jinja2.exceptions.TemplateSyntaxError: unexpected '%'
 2019-08-12 23:05:49,840 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
 2019-08-12 23:07:05,285 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
 2019-08-12 23:07:11,392 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
+2019-08-14 19:41:26,874 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
+2019-08-14 19:42:20,975 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]

@@ -91,7 +91,7 @@ msgstr "Ваш пост опубикован"
 msgid "Home"
 msgstr "Дом"
 
-#: app/routes.py:46 app/templates/base.html:22
+#: app/routes.py:46 app/templates/base.hgtml:22
 msgid "Explore"
 msgstr "Обзор"
 
