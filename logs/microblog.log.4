@@ -1,4 +1,4 @@
-2019-08-15 15:01:07,366 ERROR: Exception on /index [GET] [in /home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask/app.py:1891]
+2019-08-15 14:59:09,622 ERROR: Exception on /user/Алексей [GET] [in /home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask/app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,8 +14,8 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask_login/utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "/home/alexey/PycharmProjects/flask_site/app/routes.py", line 42, in index
-    prev_url=prev_url)
+  File "/home/alexey/PycharmProjects/flask_site/app/routes.py", line 132, in user
+    return render_template('user.html', user=user, posts=posts.items, next_url=next_url, prev_url=prev_url)
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
     ctx.app,
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
@@ -32,8 +32,8 @@ Traceback (most recent call last):
     {% endif %)
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/home/alexey/PycharmProjects/flask_site/app/templates/index.html", line 2, in top-level template code
-    {% import 'bootstrap/wtf.html' as wtf %}
+  File "/home/alexey/PycharmProjects/flask_site/app/templates/user.html", line 1, in top-level template code
+    {% extends "base.html" %}
   File "/home/alexey/PycharmProjects/flask_site/app/templates/base.html", line 1, in top-level template code
     {% extends 'bootstrap/base.html' %}
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
@@ -46,7 +46,7 @@ Traceback (most recent call last):
     {% block content -%}
   File "/home/alexey/PycharmProjects/flask_site/app/templates/base.html", line 48, in block "content"
     {% block app_content %}{% endblock %}
-  File "/home/alexey/PycharmProjects/flask_site/app/templates/index.html", line 11, in block "app_content"
+  File "/home/alexey/PycharmProjects/flask_site/app/templates/user.html", line 25, in block "app_content"
     {% include '_post.html' %}
   File "/home/alexey/PycharmProjects/flask_site/venv/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
