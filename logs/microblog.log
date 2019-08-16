@@ -67,3 +67,4 @@ jinja2.exceptions.TemplateSyntaxError: expected token 'end of statement block', 
 2019-08-15 15:14:49,614 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
 2019-08-15 15:23:00,533 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
 2019-08-15 15:23:07,706 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:52]
+2019-08-16 17:46:44,378 INFO: Microblog startup [in /home/alexey/PycharmProjects/flask_site/app/__init__.py:55]
