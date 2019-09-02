@@ -83,7 +83,13 @@
                     var elem = $(event.currentTarget);
                     timer = setTimeout(function() {
                         timer = null
-                        //popup
+                        xhr = $.ajax(
+                        '/user/' + elem.first().text().trim() + '/popup').done(
+                            function(data) {
+                                xhr = null
+                                // create and display popup here
+                            }
+                        );
                     }, 1000);
                 },
                 function(event) {
@@ -92,6 +98,13 @@
                     if (timer) {
                         clearTimeout(timer);
                         timer = null;
+                    }
+                    else if (xhr) {
+                        xhr.abort();
+                        xhr = null;
+                    }
+                    else {
+                        // destroy popup here
                     }
                 }
             )
