@@ -1,15 +1,15 @@
 from datetime import datetime
 from hashlib import md5
+import json
 from time import time
 from flask import current_app
 from flask_login import UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
-from app import db, login
-from app.search import add_to_index, remove_from_index, query_index
-import json
 import redis
 import rq
+from app import db, login
+from app.search import add_to_index, remove_from_index, query_index
 
 
 class SearchableMixin(object):
@@ -21,7 +21,8 @@ class SearchableMixin(object):
         when = []
         for i in range(len(ids)):
             when.append((ids[i], i))
-        return cls.query.filter(cls.id.in_(ids)).order_by(db.case(when, value=cls.id)), total
+        return cls.query.filter(cls.id.in_(ids)).order_by(
+            db.case(when, value=cls.id)), total
 
     @classmethod
     def before_commit(cls, session):
@@ -81,7 +82,8 @@ class User(UserMixin, db.Model):
                                         foreign_keys='Message.recipient_id',
                                         backref='recipient', lazy='dynamic')
     last_message_read_time = db.Column(db.DateTime)
-    notifications = db.relationship('Notification', backref='user', lazy='dynamic')
+    notifications = db.relationship('Notification', backref='user',
+                                    lazy='dynamic')
     tasks = db.relationship('Task', backref='user', lazy='dynamic')
 
     def __repr__(self):
@@ -155,7 +157,9 @@ class User(UserMixin, db.Model):
         return Task.query.filter_by(user=self, complete=False).all()
 
     def get_task_in_progress(self, name):
-        return Task.query.filter_by(name=name, user=self, complete=False).first()
+        return Task.query.filter_by(name=name, user=self,
+                                    complete=False).first()
+
 
 @login.user_loader
 def load_user(id):
@@ -194,6 +198,7 @@ class Notification(db.Model):
 
     def get_data(self):
         return json.loads(str(self.payload_json))
+
 
 class Task(db.Model):
     id = db.Column(db.String(36), primary_key=True)
